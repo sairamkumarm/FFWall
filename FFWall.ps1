@@ -1,6 +1,6 @@
 <#
-╔═════════════════════════════════════════════════════════╗
-║																						    ║
+╔════════════════════════════════════════════════════════════════════════════╗
+║														        			 ║
 ║             ________  ________  __       __            __  __              ║
 ║            |        \|        \|  \  _  |  \          |  \|  \             ║
 ║            | $$$$$$$$| $$$$$$$$| $$ / \ | $$  ______  | $$| $$             ║
@@ -10,11 +10,11 @@
 ║            | $$      | $$      | $$$$  \$$$$|  $$$$$$$| $$| $$             ║
 ║            | $$      | $$      | $$$    \$$$ \$$    $$| $$| $$             ║
 ║             \$$       \$$       \$$      \$$  \$$$$$$$ \$$ \$$             ║
-║                                                   					 		    ║            
-║                                                     						    ║
-║                             Folder Level Firewall              			    ║
-║                                  Version 2.0                      		    ║
-╚═════════════════════════════════════════════════════════╝
+║                                                   					     ║            
+║                                                     					     ║
+║                             Folder Level Firewall              	         ║
+║                                  Version 2.0                          	 ║
+╚════════════════════════════════════════════════════════════════════════════╝
 
 FFWall - A PowerShell-based tool for creating session-managed Windows 
 Firewall rules to block executables at the folder level. It recursively 
@@ -29,47 +29,49 @@ FEATURES:
 - Comprehensive logging and audit trails
 - Safe rollback operations
 
-╔═════════════════════════════════════════════════════════╗																		
-║																						    ║
-║           LICENSE: GPL v3 - This software is free and open source. 		    ║
-║          Any derivative works must also be open source and properly		    ║ 
+╔════════════════════════════════════════════════════════════════════════════╗																		
+║															  			     ║
+║           LICENSE: GPL v3 - This software is free and open source. 	     ║
+║          Any derivative works must also be open source and properly		 ║ 
 ║                   attributed to the original creators.                     ║
 ║                                                                            ║
-╚═════════════════════════════════════════════════════════╝
+╚════════════════════════════════════════════════════════════════════════════╝
 
 CREDITS & DEVELOPMENT HISTORY:
-┌─────────────────────────────────────────────────────────┐
-│ Original Concept & Architecture:                                           │
-│   • Sairamkumar M [SR21] - Core design, safety requirements, session       │
-│     management architecture, initial batch prototype and comprehensive     │
-│     testing.                                                               │
+┌────────────────────────────────────────────────────────────────────────────┐
 │                                                                            │
-│ Initial Implementation:                                                    │
-│   • ChatGPT (OpenAI) - Foundational batch file structure, firewall         │
-│     command scaffolding, and basic menu system                             │
+│   Original Concept & Architecture:                                         │
+│     • Sairamkumar M [SR21] - Core design, safety requirements, session     │
+│       management architecture, initial batch prototype and comprehensive   │
+│       testing.                                                             │
 │                                                                            │
-│ PowerShell Conversion & Advanced Features:                                 │
-│   • Claude (Anthropic) - Complete rewrite to PowerShell, robust error      │
-│     handling, symlink/junction detection, UAC integration, logging         │
-│     system, and user interface improvements                                │
+│   Initial Implementation:                                                  │
+│     • ChatGPT (OpenAI) - Foundational batch file structure, firewall       │
+│       command scaffolding, and basic menu system                           │
 │                                                                            │
-│ Collaborative Development:                                                 │
-│   • This project represents the combined efforts of human creativity,      │
-│     AI assistance, and iterative problem-solving across multiple           │
-│     development cycles                                                     │
-└─────────────────────────────────────────────────────────┘
+│   PowerShell Conversion & Advanced Features:                               │
+│     • Claude (Anthropic) - Complete rewrite to PowerShell, robust error    │
+│       handling, symlink/junction detection, UAC integration, logging       │
+│       system, and user interface improvements                              │
+│                                                                            │
+│   Collaborative Development:                                               │
+│     • This project represents the combined efforts of human creativity,    │
+│       AI assistance, and iterative problem-solving across multiple         │
+│       development cycles                                                   │
+│                                                                            │
+└────────────────────────────────────────────────────────────────────────────┘
 
 REPOSITORY: https://github.com/sairamkumarm/ffwall
 DOCUMENTATION: See README.md for detailed usage instructions
 
-╔═════════════════════════════════════════════════════════╗
-║																				      	    ║																					
+╔════════════════════════════════════════════════════════════════════════════╗
+║																      	     ║																					
 ║  WARNING: This tool creates Windows Firewall rules that block network      ║
 ║  access for applications. Always test in a controlled environment before   ║
-║  deploying to critical systems. Use rollback functionality to  			    ║
-║  remove rules when no longer needed.											    ║
+║  deploying to critical systems. Use rollback functionality to  			 ║
+║  remove rules when no longer needed.									     ║
 ║                                                                            ║
-╠═════════════════════════════════════════════════════════╣
+╠════════════════════════════════════════════════════════════════════════════╣
 ║                                                                            ║
 ║  Copyright (C) 2025 FFWall Contributors                                    ║
 ║  This program is free software: you can redistribute it and/or modify it   ║
@@ -84,7 +86,7 @@ DOCUMENTATION: See README.md for detailed usage instructions
 ║  You should have received a copy of the GNU General Public License along   ║
 ║  with this program. If not, see <https://www.gnu.org/licenses/>.           ║
 ║                                                                            ║
-╚═════════════════════════════════════════════════════════╝
+╚════════════════════════════════════════════════════════════════════════════╝
 #>
 
 # Set console colors for the script session
@@ -160,15 +162,15 @@ function Show-Menu {
     $adminStatus = if (Test-Administrator) { " [ADMIN]" } else { " [USER]" }
     $adminColor = if (Test-Administrator) { "Green" } else { "Yellow" }
     
-    Write-Host "============================" -ForegroundColor Cyan
+    Write-Host "=====================================" -ForegroundColor Cyan
     Write-Host "FFWall - FolderLevel Firewall" -ForegroundColor Cyan -NoNewline
     Write-Host $adminStatus -ForegroundColor $adminColor
-    Write-Host "============================" -ForegroundColor Cyan
+    Write-Host "=====================================" -ForegroundColor Cyan
     Write-Host "1. Scan and list all .exe files" -ForegroundColor White
     Write-Host "2. Block all scanned .exe files" -ForegroundColor White
     Write-Host "3. Rollback FFWall rules" -ForegroundColor White
     Write-Host "4. Exit" -ForegroundColor White
-    Write-Host "============================" -ForegroundColor Cyan
+    Write-Host "=====================================" -ForegroundColor Cyan
     
     if ($global:SessionTag -ne "") {
         Write-Host "Current Session Tag: $global:SessionTag" -ForegroundColor Yellow
@@ -183,7 +185,7 @@ function Get-TimeStamp {
 function Start-ScanPhase {
     Clear-Host
     Write-Host "============================" -ForegroundColor Green
-    Write-Host "          SCAN PHASE" -ForegroundColor Green
+    Write-Host "        SCAN PHASE" -ForegroundColor Green
     Write-Host "============================" -ForegroundColor Green
     
     # Ask for session name
@@ -292,7 +294,7 @@ Scan Path: $ScriptPath
     $logFooter = @"
 
 ============================
-      SCAN SUMMARY
+        SCAN SUMMARY
 ============================
 Total .exe files found: $fileCount
 Status: SUCCESS
@@ -344,7 +346,7 @@ function Get-FileCountFromLog($logPath) {
 function Start-BlockPhase {
     Clear-Host
     Write-Host "============================" -ForegroundColor Red
-    Write-Host "         BLOCK PHASE" -ForegroundColor Red
+    Write-Host "        BLOCK PHASE" -ForegroundColor Red
     Write-Host "============================" -ForegroundColor Red
     
     # Check for administrator privileges
@@ -468,7 +470,7 @@ Target Files: $totalExe
     
     Write-Host ""
     Write-Host "============================" -ForegroundColor Red
-    Write-Host "       BLOCKING..." -ForegroundColor Red
+    Write-Host "         BLOCKING..." -ForegroundColor Red
     Write-Host "============================" -ForegroundColor Red
     
     # Initialize counters
@@ -539,7 +541,7 @@ Target Files: $totalExe
     $logFooter = @"
 
 ============================
-     BLOCKING SUMMARY
+      BLOCKING SUMMARY
 ============================
 Total files processed: $totalExe
 Expected rules: $expectedRules
@@ -575,7 +577,7 @@ Status: $status
 function Start-RollbackPhase {
     Clear-Host
     Write-Host "============================" -ForegroundColor Magenta
-    Write-Host "        ROLLBACK PHASE" -ForegroundColor Magenta
+    Write-Host "      ROLLBACK PHASE" -ForegroundColor Magenta
     Write-Host "============================" -ForegroundColor Magenta
     
     # Check for administrator privileges
@@ -721,7 +723,7 @@ Rules found before rollback:
     $logFooter = @"
 
 ============================
-    ROLLBACK SUMMARY
+     ROLLBACK SUMMARY
 ============================
 Session: $rollbackSession
 Status: $rollbackStatus
@@ -737,7 +739,7 @@ Status: $rollbackStatus
     
     Write-Host ""
     Write-Host "============================" -ForegroundColor Magenta
-    Write-Host "    ROLLBACK COMPLETE" -ForegroundColor Magenta
+    Write-Host "     ROLLBACK COMPLETE" -ForegroundColor Magenta
     Write-Host "============================" -ForegroundColor Magenta
     Write-Host "Session: $rollbackSession" -ForegroundColor Cyan
     Write-Host "Status: $rollbackStatus" -ForegroundColor $(if ($rollbackStatus -eq "SUCCESS") { "Green" } else { "Red" })
@@ -758,16 +760,16 @@ while ($true) {
         "4" { 
             Clear-Host
             Write-Host ""
-            Write-Host "=============================" -ForegroundColor Cyan
-            Write-Host "         GOODBYE!" -ForegroundColor Cyan
-            Write-Host "=============================" -ForegroundColor Cyan
+            Write-Host "===============================" -ForegroundColor Cyan
+            Write-Host "           GOODBYE!" -ForegroundColor Cyan
+            Write-Host "===============================" -ForegroundColor Cyan
             Write-Host ""
-            Write-Host "Happy Blocking!" -ForegroundColor Green
+            Write-Host "       Happy Blocking!" -ForegroundColor Green
             Write-Host ""
-            Write-Host "Compliments of:" -ForegroundColor White
-            Write-Host "  SR21, Claude & ChatGPT" -ForegroundColor Yellow
+            Write-Host "       Compliments of:" -ForegroundColor White
+            Write-Host "    SR21, Claude & ChatGPT" -ForegroundColor Yellow
             Write-Host ""
-            Write-Host "=============================" -ForegroundColor Cyan
+            Write-Host "===============================" -ForegroundColor Cyan
             Write-Host ""
             exit 
         }
@@ -776,4 +778,5 @@ while ($true) {
             Start-Sleep -Seconds 1
         }
     }
+
 }
