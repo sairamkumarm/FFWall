@@ -1,20 +1,19 @@
 <#
-╔════════════════════════════════════════════════════════════════════════════╗
-║														        			 ║
-║             ________  ________  __       __            __  __              ║
-║            |        \|        \|  \  _  |  \          |  \|  \             ║
-║            | $$$$$$$$| $$$$$$$$| $$ / \ | $$  ______  | $$| $$             ║
-║            | $$__    | $$__    | $$/  $\| $$ |      \ | $$| $$             ║
-║            | $$  \   | $$  \   | $$  $$$\ $$  \$$$$$$\| $$| $$             ║
-║            | $$$$$   | $$$$$   | $$ $$\$$\$$ /      $$| $$| $$             ║
-║            | $$      | $$      | $$$$  \$$$$|  $$$$$$$| $$| $$             ║
-║            | $$      | $$      | $$$    \$$$ \$$    $$| $$| $$             ║
-║             \$$       \$$       \$$      \$$  \$$$$$$$ \$$ \$$             ║
-║                                                   					     ║            
-║                                                     					     ║
-║                             Folder Level Firewall              	         ║
-║                                  Version 2.0                          	 ║
-╚════════════════════════════════════════════════════════════════════════════╝
+
+														        			 
+            ________  ________  __       __            __  __              
+           |        \|        \|  \  _  |  \          |  \|  \             
+           | $$$$$$$$| $$$$$$$$| $$ / \ | $$  ______  | $$| $$             
+           | $$__    | $$__    | $$/  $\| $$ |      \ | $$| $$             
+           | $$  \   | $$  \   | $$  $$$\ $$  \$$$$$$\| $$| $$             
+           | $$$$$   | $$$$$   | $$ $$\$$\$$ /      $$| $$| $$             
+           | $$      | $$      | $$$$  \$$$$|  $$$$$$$| $$| $$             
+           | $$      | $$      | $$$    \$$$ \$$    $$| $$| $$             
+            \$$       \$$       \$$      \$$  \$$$$$$$ \$$ \$$             
+                                                 					              
+                                                  					     
+                          Folder Level Firewall              	         
+                               Version 2.0                          	 
 
 FFWall - A PowerShell-based tool for creating session-managed Windows 
 Firewall rules to block executables at the folder level. It recursively 
@@ -29,64 +28,46 @@ FEATURES:
 - Comprehensive logging and audit trails
 - Safe rollback operations
 
-╔════════════════════════════════════════════════════════════════════════════╗																		
-║															  			     ║
-║           LICENSE: GPL v3 - This software is free and open source. 	     ║
-║          Any derivative works must also be open source and properly		 ║ 
-║                   attributed to the original creators.                     ║
-║                                                                            ║
-╚════════════════════════════════════════════════════════════════════════════╝
+LICENSE: GPL v3 - This software is free and open source.  
+Any derivative works must also be open source and properly 
+attributed to the original creators.
 
 CREDITS & DEVELOPMENT HISTORY:
-┌────────────────────────────────────────────────────────────────────────────┐
-│                                                                            │
-│   Original Concept & Architecture:                                         │
-│     • Sairamkumar M [SR21] - Core design, safety requirements, session     │
-│       management architecture, initial batch prototype and comprehensive   │
-│       testing.                                                             │
-│                                                                            │
-│   Initial Implementation:                                                  │
-│     • ChatGPT (OpenAI) - Foundational batch file structure, firewall       │
-│       command scaffolding, and basic menu system                           │
-│                                                                            │
-│   PowerShell Conversion & Advanced Features:                               │
-│     • Claude (Anthropic) - Complete rewrite to PowerShell, robust error    │
-│       handling, symlink/junction detection, UAC integration, logging       │
-│       system, and user interface improvements                              │
-│                                                                            │
-│   Collaborative Development:                                               │
-│     • This project represents the combined efforts of human creativity,    │
-│       AI assistance, and iterative problem-solving across multiple         │
-│       development cycles                                                   │
-│                                                                            │
-└────────────────────────────────────────────────────────────────────────────┘
+Original Concept & Architecture:
+  • Sairamkumar M [SR21] - Core design, safety requirements, session 
+    management architecture, initial batch prototype and comprehensive testing. 
 
-REPOSITORY: https://github.com/sairamkumarm/ffwall
+Initial Implementation:
+  • ChatGPT (OpenAI) - Foundational batch file structure, firewall 
+    command scaffolding, and basic menu system. 
+
+PowerShell Conversion & Advanced Features:
+  • Claude (Anthropic) - Complete rewrite to PowerShell, robust error 
+    handling, symlink/junction detection, UAC integration, logging system, 
+    and user interface improvements. 
+
+Collaborative Development:
+  • This project represents the combined efforts of human creativity, 
+    AI assistance, and iterative problem-solving across multiple 
+    development cycles. 
+
+REPOSITORY: https://github.com/sairamkumarm/ffwall  
 DOCUMENTATION: See README.md for detailed usage instructions
 
-╔════════════════════════════════════════════════════════════════════════════╗
-║																      	     ║																					
-║  WARNING: This tool creates Windows Firewall rules that block network      ║
-║  access for applications. Always test in a controlled environment before   ║
-║  deploying to critical systems. Use rollback functionality to  			 ║
-║  remove rules when no longer needed.									     ║
-║                                                                            ║
-╠════════════════════════════════════════════════════════════════════════════╣
-║                                                                            ║
-║  Copyright (C) 2025 FFWall Contributors                                    ║
-║  This program is free software: you can redistribute it and/or modify it   ║
-║  under the terms of the GNU General Public License as published by the     ║
-║  Free Software Foundation, either version 3 of the License, or             ║
-║  (at your option) any later version.                                       ║
-║                                                                            ║
-║  This program is distributed in the hope that it will be useful, but       ║
-║  WITHOUT ANY WARRANTY; without even the implied warranty of                ║
-║  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.                      ║
-║  See the GNU General Public License for more details.                      ║
-║  You should have received a copy of the GNU General Public License along   ║
-║  with this program. If not, see <https://www.gnu.org/licenses/>.           ║
-║                                                                            ║
-╚════════════════════════════════════════════════════════════════════════════╝
+WARNING: This tool creates Windows Firewall rules that block network access for applications.  
+Always test in a controlled environment before deploying to critical systems.  
+Use rollback functionality to remove rules when no longer needed.
+
+Copyright (C) 2025 FFWall Contributors  
+This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License 
+as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty 
+of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  
+See the GNU General Public License for more details.  
+
+You should have received a copy of the GNU General Public License along with this program.  
+If not, see <https://www.gnu.org/licenses/>.
 #>
 
 # Set console colors for the script session
@@ -162,15 +143,15 @@ function Show-Menu {
     $adminStatus = if (Test-Administrator) { " [ADMIN]" } else { " [USER]" }
     $adminColor = if (Test-Administrator) { "Green" } else { "Yellow" }
     
-    Write-Host "=====================================" -ForegroundColor Cyan
+    Write-Host "============================" -ForegroundColor Cyan
     Write-Host "FFWall - FolderLevel Firewall" -ForegroundColor Cyan -NoNewline
     Write-Host $adminStatus -ForegroundColor $adminColor
-    Write-Host "=====================================" -ForegroundColor Cyan
+    Write-Host "============================" -ForegroundColor Cyan
     Write-Host "1. Scan and list all .exe files" -ForegroundColor White
     Write-Host "2. Block all scanned .exe files" -ForegroundColor White
     Write-Host "3. Rollback FFWall rules" -ForegroundColor White
     Write-Host "4. Exit" -ForegroundColor White
-    Write-Host "=====================================" -ForegroundColor Cyan
+    Write-Host "============================" -ForegroundColor Cyan
     
     if ($global:SessionTag -ne "") {
         Write-Host "Current Session Tag: $global:SessionTag" -ForegroundColor Yellow
@@ -185,7 +166,7 @@ function Get-TimeStamp {
 function Start-ScanPhase {
     Clear-Host
     Write-Host "============================" -ForegroundColor Green
-    Write-Host "        SCAN PHASE" -ForegroundColor Green
+    Write-Host "          SCAN PHASE" -ForegroundColor Green
     Write-Host "============================" -ForegroundColor Green
     
     # Ask for session name
@@ -294,7 +275,7 @@ Scan Path: $ScriptPath
     $logFooter = @"
 
 ============================
-        SCAN SUMMARY
+      SCAN SUMMARY
 ============================
 Total .exe files found: $fileCount
 Status: SUCCESS
@@ -346,7 +327,7 @@ function Get-FileCountFromLog($logPath) {
 function Start-BlockPhase {
     Clear-Host
     Write-Host "============================" -ForegroundColor Red
-    Write-Host "        BLOCK PHASE" -ForegroundColor Red
+    Write-Host "         BLOCK PHASE" -ForegroundColor Red
     Write-Host "============================" -ForegroundColor Red
     
     # Check for administrator privileges
@@ -470,13 +451,14 @@ Target Files: $totalExe
     
     Write-Host ""
     Write-Host "============================" -ForegroundColor Red
-    Write-Host "         BLOCKING..." -ForegroundColor Red
+    Write-Host "       BLOCKING..." -ForegroundColor Red
     Write-Host "============================" -ForegroundColor Red
     
     # Initialize counters
     $count = 0
     $errorCount = 0
     $successCount = 0
+    $skipCount = 0
     
     foreach ($file in $exeFiles) {
         $count++
@@ -486,18 +468,29 @@ Target Files: $totalExe
         $rulesCreated = 0
         
         # Try to create outbound rule
-        $outRuleName = "FFWall_${blockSession}_OUT_$fileName"
+        $pathSuffix = $file -replace ':', '' -replace '\\', '_' -replace ' ', '_' -replace '\(', '' -replace '\)', ''
+        $outRuleName = "FFWall_${blockSession}_OUT_${fileName}_${pathSuffix}"
+        
+        # Check if rule name exceeds Windows firewall rule name limit (256 characters)
+        if ($outRuleName.Length -gt 256) {
+            # Fallback to hash when path is too long
+            $pathHash = [System.Security.Cryptography.SHA256]::Create().ComputeHash([System.Text.Encoding]::UTF8.GetBytes($file))
+            $pathHashString = [System.BitConverter]::ToString($pathHash).Replace("-", "").Substring(0, 16)
+            $outRuleName = "FFWall_${blockSession}_OUT_${fileName}_${pathHashString}"
+        }
+        
         $existingOutRule = Get-NetFirewallRule -DisplayName $outRuleName -ErrorAction SilentlyContinue
         
         if ($existingOutRule) {
             Write-Host "  [SKIP] Outbound rule already exists for $fileName" -ForegroundColor Cyan
             "SKIP (OUT): $file - Rule already exists" | Add-Content -Path $blockLogFile -Encoding UTF8
+            $skipCount++
         } else {
             try {
-                $null = New-NetFirewallRule -DisplayName $outRuleName -Direction Outbound -Program $file -Action Block -ErrorAction Stop
+                $null = New-NetFirewallRule -DisplayName $outRuleName -Group "FFWall_$blockSession" -Direction Outbound -Program $file -Action Block -ErrorAction Stop
                 Write-Host "  [SUCCESS] Created outbound rule for $fileName" -ForegroundColor Green
                 "SUCCESS (OUT): $file" | Add-Content -Path $blockLogFile -Encoding UTF8
-                $rulesCreated++
+                $successCount++
             }
             catch {
                 $errorCount++
@@ -506,19 +499,31 @@ Target Files: $totalExe
             }
         }
         
-        # Try to create inbound rule
-        $inRuleName = "FFWall_${blockSession}_IN_$fileName"
+        # Try to create inbound rule  
+        $inRuleName = "FFWall_${blockSession}_IN_${fileName}_${pathSuffix}"
+        
+        # Check if rule name exceeds Windows firewall rule name limit (256 characters)
+        if ($inRuleName.Length -gt 256) {
+            # Use same hash as outbound rule for consistency
+            if (-not $pathHashString) {
+                $pathHash = [System.Security.Cryptography.SHA256]::Create().ComputeHash([System.Text.Encoding]::UTF8.GetBytes($file))
+                $pathHashString = [System.BitConverter]::ToString($pathHash).Replace("-", "").Substring(0, 16)
+            }
+            $inRuleName = "FFWall_${blockSession}_IN_${fileName}_${pathHashString}"
+        }
+        
         $existingInRule = Get-NetFirewallRule -DisplayName $inRuleName -ErrorAction SilentlyContinue
         
         if ($existingInRule) {
             Write-Host "  [SKIP] Inbound rule already exists for $fileName" -ForegroundColor Cyan
             "SKIP (IN): $file - Rule already exists" | Add-Content -Path $blockLogFile -Encoding UTF8
+            $skipCount++
         } else {
             try {
-                $null = New-NetFirewallRule -DisplayName $inRuleName -Direction Inbound -Program $file -Action Block -ErrorAction Stop
+                $null = New-NetFirewallRule -DisplayName $inRuleName -Group "FFWall_$blockSession" -Direction Inbound -Program $file -Action Block -ErrorAction Stop
                 Write-Host "  [SUCCESS] Created inbound rule for $fileName" -ForegroundColor Green
                 "SUCCESS (IN): $file" | Add-Content -Path $blockLogFile -Encoding UTF8
-                $rulesCreated++
+                $successCount++
             }
             catch {
                 $errorCount++
@@ -527,25 +532,25 @@ Target Files: $totalExe
             }
         }
         
-        if ($rulesCreated -eq 0) {
+        if ($successCount -eq 0 -and $count -eq 1) {
             Write-Host "  No new rules created (all already existed)" -ForegroundColor Gray
         }
     }
     
     # Calculate success count
     $expectedRules = $totalExe * 2
-    $successCount = $expectedRules - $errorCount
     
     # Add footer to block log
     $status = if ($errorCount -eq 0) { "SUCCESS" } else { "PARTIAL SUCCESS" }
     $logFooter = @"
 
 ============================
-      BLOCKING SUMMARY
+     BLOCKING SUMMARY
 ============================
 Total files processed: $totalExe
 Expected rules: $expectedRules
 Successful rules: $successCount
+Skipped rules: $skipCount
 Failed rules: $errorCount
 Status: $status
 ============================
@@ -562,8 +567,9 @@ Status: $status
     Write-Host "============================" -ForegroundColor Red
     Write-Host "Session: $blockSession" -ForegroundColor Cyan
     Write-Host "Files processed: $totalExe" -ForegroundColor Cyan
-    Write-Host "Successful rules: $successCount/$expectedRules" -ForegroundColor Green
-    Write-Host "Failed rules: $errorCount" -ForegroundColor Red
+    Write-Host "Rules created: $successCount" -ForegroundColor Green
+    Write-Host "Rules skipped: $skipCount" -ForegroundColor Cyan
+    Write-Host "Rules failed: $errorCount" -ForegroundColor Red
     
     if ($errorCount -gt 0) {
         Write-Host "WARNING: Some rules failed - check block_$blockSession.log for details" -ForegroundColor Yellow
@@ -577,7 +583,7 @@ Status: $status
 function Start-RollbackPhase {
     Clear-Host
     Write-Host "============================" -ForegroundColor Magenta
-    Write-Host "      ROLLBACK PHASE" -ForegroundColor Magenta
+    Write-Host "        ROLLBACK PHASE" -ForegroundColor Magenta
     Write-Host "============================" -ForegroundColor Magenta
     
     # Check for administrator privileges
@@ -641,8 +647,8 @@ function Start-RollbackPhase {
     Write-Host ""
     Write-Host "Searching for firewall rules with session tag '$rollbackSession'..." -ForegroundColor Yellow
     
-    # Check if any rules exist
-    $existingRules = Get-NetFirewallRule -DisplayName "FFWall_$rollbackSession*" -ErrorAction SilentlyContinue
+    # Check if any rules exist - use group-based search instead of name pattern matching
+    $existingRules = Get-NetFirewallRule -Group "FFWall_$rollbackSession" -ErrorAction SilentlyContinue
     
     if ($existingRules.Count -eq 0) {
         Write-Host "No firewall rules found for session: $rollbackSession" -ForegroundColor Red
@@ -704,17 +710,17 @@ Rules found before rollback:
     Write-Host "Removing all rules for session: $rollbackSession" -ForegroundColor Yellow
     $rollbackStatus = "SUCCESS"
     
-    try {
-        Remove-NetFirewallRule -DisplayName "FFWall_$rollbackSession*" -ErrorAction Stop
+     try {
+        Remove-NetFirewallRule -Group "FFWall_$rollbackSession" -ErrorAction Stop
         Write-Host "SUCCESS: All rules removed successfully" -ForegroundColor Green
-        "Rollback command: Remove-NetFirewallRule -DisplayName `"FFWall_$rollbackSession*`"" | Add-Content -Path $rollbackLogFile -Encoding UTF8
+        "Rollback command: Remove-NetFirewallRule -Group `"FFWall_$rollbackSession`"" | Add-Content -Path $rollbackLogFile -Encoding UTF8
         "Status: SUCCESS" | Add-Content -Path $rollbackLogFile -Encoding UTF8
     }
     catch {
         $rollbackStatus = "FAILED"
         Write-Host "ERROR: Failed to remove rules for session: $rollbackSession" -ForegroundColor Red
         Write-Host "Error: $($_.Exception.Message)" -ForegroundColor Red
-        "Rollback command: Remove-NetFirewallRule -DisplayName `"FFWall_$rollbackSession*`"" | Add-Content -Path $rollbackLogFile -Encoding UTF8
+        "Rollback command: Remove-NetFirewallRule -Group `"FFWall_$rollbackSession`"" | Add-Content -Path $rollbackLogFile -Encoding UTF8
         "Status: FAILED" | Add-Content -Path $rollbackLogFile -Encoding UTF8
         "Error: $($_.Exception.Message)" | Add-Content -Path $rollbackLogFile -Encoding UTF8
     }
@@ -723,7 +729,7 @@ Rules found before rollback:
     $logFooter = @"
 
 ============================
-     ROLLBACK SUMMARY
+    ROLLBACK SUMMARY
 ============================
 Session: $rollbackSession
 Status: $rollbackStatus
@@ -739,7 +745,7 @@ Status: $rollbackStatus
     
     Write-Host ""
     Write-Host "============================" -ForegroundColor Magenta
-    Write-Host "     ROLLBACK COMPLETE" -ForegroundColor Magenta
+    Write-Host "    ROLLBACK COMPLETE" -ForegroundColor Magenta
     Write-Host "============================" -ForegroundColor Magenta
     Write-Host "Session: $rollbackSession" -ForegroundColor Cyan
     Write-Host "Status: $rollbackStatus" -ForegroundColor $(if ($rollbackStatus -eq "SUCCESS") { "Green" } else { "Red" })
@@ -760,16 +766,16 @@ while ($true) {
         "4" { 
             Clear-Host
             Write-Host ""
-            Write-Host "===============================" -ForegroundColor Cyan
-            Write-Host "           GOODBYE!" -ForegroundColor Cyan
-            Write-Host "===============================" -ForegroundColor Cyan
+            Write-Host "=============================" -ForegroundColor Cyan
+            Write-Host "         GOODBYE!" -ForegroundColor Cyan
+            Write-Host "=============================" -ForegroundColor Cyan
             Write-Host ""
-            Write-Host "       Happy Blocking!" -ForegroundColor Green
+            Write-Host "Happy Blocking!" -ForegroundColor Green
             Write-Host ""
-            Write-Host "       Compliments of:" -ForegroundColor White
-            Write-Host "    SR21, Claude & ChatGPT" -ForegroundColor Yellow
+            Write-Host "Compliments of:" -ForegroundColor White
+            Write-Host "  sr21, Claude & ChatGPT" -ForegroundColor Yellow
             Write-Host ""
-            Write-Host "===============================" -ForegroundColor Cyan
+            Write-Host "=============================" -ForegroundColor Cyan
             Write-Host ""
             exit 
         }
@@ -778,5 +784,4 @@ while ($true) {
             Start-Sleep -Seconds 1
         }
     }
-
 }
